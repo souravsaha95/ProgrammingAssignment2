@@ -1,3 +1,5 @@
+#makeCacheMatrix creates an R object that stores a vector and its mean.
+
 makeCacheMatrix <- function(x=matrix()) {
         inv <- NULL
         set <- function(y) {
@@ -13,7 +15,8 @@ makeCacheMatrix <- function(x=matrix()) {
 
 }
 
-
+#cachemean() requires an argument that is returned by makeCacheMatrix() in order to retrieve the 
+#iverse matrix from the cached value that is stored in the makeCacheMatrix() object's environment.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         inv <- x$getinverse()
